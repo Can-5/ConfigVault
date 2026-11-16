@@ -1,0 +1,22 @@
+[package]
+name = "configvault"
+version = "0.1.0"
+edition = "2021"
+description = "Configuration file backup, versioning and restore"
+license = "MIT"
+
+[lib]
+name = "configvault_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+flate2 = "1"
+tar = "0.4"
+sha2 = "0.10"
+tauri-plugin-dialog = "2"
